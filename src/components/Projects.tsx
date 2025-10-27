@@ -19,7 +19,7 @@ const Projects = () => {
         'AI-powered agricultural platform that helps farmers with crop monitoring, weather predictions, and yield optimization. Features real-time analytics and IoT integration.',
       image: 'https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=800',
       tags: ['React', 'Express', 'MongoDB'],
-      liveUrl: '#',
+      liveUrl: 'https://farmfriend.netlify.app/',
       githubUrl: '#',
       color: 'from-green-400 to-emerald-500',
     },
