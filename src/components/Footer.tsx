@@ -28,9 +28,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', color: 'hover:text-gray-400' },
-    { icon: Linkedin, href: 'https://linkedin.com', color: 'hover:text-blue-400' },
-    { icon: Mail, href: 'mailto:vasu@example.com', color: 'hover:text-purple-400' },
+    { icon: Github, href: 'https://github.com/2303A51618', color: 'hover:text-gray-400' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/vasu-chippa-0640112a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', color: 'hover:text-blue-400' },
+    { icon: Mail, href: 'mailto:chippavasu3@gmail.com', color: 'hover:text-purple-400' },
   ];
 
   const scrollToSection = (sectionId: string) => {
@@ -119,9 +119,9 @@ const Footer = () => {
           >
             <h4 className="text-lg font-bold text-white mb-4">Get In Touch</h4>
             <div className="space-y-3 text-gray-400">
-              <p>Email: vasu.chippa@example.com</p>
-              <p>Phone: +1 (555) 123-4567</p>
-              <p>Location: San Francisco, CA</p>
+              <p>Email: chippavasu3@gmail.com</p>
+              <p>Phone: +91 9381701606</p>
+              <p>Warangal, Telangana,India</p>
             </div>
 
             <motion.div

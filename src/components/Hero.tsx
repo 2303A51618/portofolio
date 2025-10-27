@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// Importing necessary icons based on the target image (Screenshot 2025-10-25 144502.png)
-import { FaGithub, FaLinkedin, FaEnvelope, FaReact, FaNodeJs, FaDocker, FaJava, FaPython, FaGitAlt } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiJavascript, SiMysql, SiTypescript, SiPostman } from 'react-icons/si';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Hero() {
   const [displayedText, setDisplayedText] = useState('');
@@ -14,22 +12,22 @@ export default function Hero() {
     'Full Stack Developer 💻'
   ];
 
-  // **Skills array ordered to match the visual placement in the target image (6 inner, 9 outer)**
-    const skills = [
-    { icon: FaReact, color: '#61DAFB', name: 'React' },
-    { icon: FaNodeJs, color: '#339933', name: 'Node.js' },
-    { icon: SiMongodb, color: '#47A248', name: 'MongoDB' },
-    { icon: SiExpress, color: '#FFFFFF', name: 'Express' },
-    { icon: SiJavascript, color: '#F7DF1E', name: 'JavaScript' },
-    { icon: SiTypescript, color: '#3178C6', name: 'TypeScript' },
-    { icon: FaDocker, color: '#2496ED', name: 'Docker' },
-    { icon: SiMysql, color: '#4479A1', name: 'MySQL' },
-    { icon: FaJava, color: '#007396', name: 'Java' },
-    { icon: FaPython, color: '#3776AB', name: 'Python' },
-    { icon: FaGithub, color: '#FFFFFF', name: 'GitHub' },
-    { icon: FaGitAlt, color: '#F05032', name: 'Git' },
-    { icon: SiPostman, color: '#FF6C37', name: 'Postman' },
-    { icon: FaReact, color: '#61DAFB', name: 'React Native' }
+  // Skills array ordered to match the visual placement in the target image (labels used for safe rendering)
+  const skills = [
+    { color: '#61DAFB', name: 'React' },
+    { color: '#339933', name: 'Node.js' },
+    { color: '#47A248', name: 'MongoDB' },
+    { color: '#FFFFFF', name: 'Express' },
+    { color: '#F7DF1E', name: 'JavaScript' },
+    { color: '#3178C6', name: 'TypeScript' },
+    { color: '#2496ED', name: 'Docker' },
+    { color: '#4479A1', name: 'MySQL' },
+    { color: '#007396', name: 'Java' },
+    { color: '#3776AB', name: 'Python' },
+    { color: '#FFFFFF', name: 'GitHub' },
+    { color: '#F05032', name: 'Git' },
+    { color: '#FF6C37', name: 'Postman' },
+    { color: '#61DAFB', name: 'React Native' }
   ];
   useEffect(() => {
     const currentTitle = titles[currentIndex];
@@ -236,27 +234,30 @@ export default function Hero() {
           </div>
 
           <div className="social-animate" style={{ display: 'flex', gap: '1.5rem' }}>
-            <a 
-              href="https://github.com/2303A51618" 
-              target="_blank" 
+            <a
+              href="https://github.com/2303A51618"
+              target="_blank"
               rel="noopener noreferrer"
               className="social-icon-hover"
+              aria-label="GitHub"
             >
-              {React.createElement(FaGithub as any)}
+              <Github />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/vasu-chippa-0640112a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/vasu-chippa-0640112a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
               rel="noopener noreferrer"
               className="social-icon-hover"
+              aria-label="LinkedIn"
             >
-              {React.createElement(FaLinkedin as any)}
+              <Linkedin />
             </a>
-            <a 
+            <a
               href="mailto:chippavasu3@gmail.com"
               className="social-icon-hover"
+              aria-label="Email"
             >
-              {React.createElement(FaEnvelope as any)}
+              <Mail />
             </a>
           </div>
         </div>
@@ -269,12 +270,12 @@ export default function Hero() {
           <div className="skills-text">SKILLS</div>
 
           {skills.map((skill, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="skill-icon"
               title={skill.name}
             >
-              {React.createElement(skill.icon as any, { style: { color: skill.color } })}
+              <span style={{ color: skill.color, fontWeight: 700, fontSize: 12 }}>{skill.name}</span>
             </div>
           ))}
         </div>
