@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect, useMemo } from 'react';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Hero() {
@@ -6,11 +7,11 @@ export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  const titles = [
+  const TITLES = useMemo(() => [
     'MERN Stack Developer 🚀',
     'Frontend Developer ✨',
     'Full Stack Developer 💻'
-  ];
+  ], []);
 
   // Skills array ordered to match the visual placement in the target image (labels used for safe rendering)
   const skills = [
@@ -30,7 +31,7 @@ export default function Hero() {
     { color: '#61DAFB', name: 'React Native' }
   ];
   useEffect(() => {
-    const currentTitle = titles[currentIndex];
+    const currentTitle = TITLES[currentIndex];
     const typingSpeed = isDeleting ? 50 : 100;
     const pauseAfterComplete = 2000;
     const pauseAfterDelete = 500;
@@ -48,14 +49,14 @@ export default function Hero() {
         } else {
           setIsDeleting(false);
           setTimeout(() => {
-            setCurrentIndex((prev) => (prev + 1) % titles.length);
+            setCurrentIndex((prev) => (prev + 1) % TITLES.length);
           }, pauseAfterDelete);
         }
       }
     }, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [displayedText, isDeleting, currentIndex, titles]);
+  }, [displayedText, isDeleting, currentIndex, TITLES]);
 
   return (
     <>
@@ -121,6 +122,10 @@ export default function Hero() {
         .hero-section .btn-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4); }
         .hero-section .social-icon-hover { color: #94a3b8; font-size: 1.5rem; transition: all 0.3s ease; }
         .hero-section .social-icon-hover:hover { color: #c084fc; transform: translateY(-4px); }
+  .buttons-row { display:flex; gap:1rem; }
+  .social-row { display:flex; gap:1.5rem; }
+  .highlight { color: #60a5fa; font-weight: 700; }
+  .skill-label { font-weight: 700; font-size: 12px; color: inherit; }
         
         .skills-orbit-container {
           position: relative; width: 600px; height: 600px; display: flex;
@@ -214,10 +219,10 @@ export default function Hero() {
           <p className="description-animate">
             I love learning new technologies and building solutions that make a difference. 
             Thanks for visiting my portfolio! 
-            <span style={{ color: '#60a5fa', fontWeight: 'bold' }}> Happy coding..!</span>
+            <span className="highlight"> Happy coding..!</span>
           </p>
 
-          <div className="buttons-animate" style={{ display: 'flex', gap: '1rem' }}>
+          <div className="buttons-animate buttons-row">
             <a 
     href="/Vasu__CV.docx" 
     target="_blank" 
@@ -233,7 +238,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="social-animate" style={{ display: 'flex', gap: '1.5rem' }}>
+          <div className="social-animate social-row">
             <a
               href="https://github.com/2303A51618"
               target="_blank"
@@ -269,13 +274,13 @@ export default function Hero() {
           
           <div className="skills-text">SKILLS</div>
 
-          {skills.map((skill, index) => (
+            {skills.map((skill, index) => (
             <div
               key={index}
               className="skill-icon"
               title={skill.name}
             >
-              <span style={{ color: skill.color, fontWeight: 700, fontSize: 12 }}>{skill.name}</span>
+              <span className="skill-label">{skill.name}</span>
             </div>
           ))}
         </div>
