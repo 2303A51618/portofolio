@@ -9,7 +9,7 @@ const Projects = () => {
         'A comprehensive healthcare platform with patient management, appointment scheduling, and medical records. Built with real-time data synchronization and role-based access control.',
       image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800',
       tags: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-      liveUrl: 'https://hosptital-management-system.netlify.app/',
+      liveUrl: 'https://hospitalmanagementsystem-s.netlify.app/',
       githubUrl: '#',
       color: 'from-cyan-400 to-blue-500',
     },
@@ -25,12 +25,12 @@ const Projects = () => {
     },
     
     {
-      title: 'Task Management & Collaboration Tool',
+      title: 'Chat Connect – Real-Time Collaboration App',
       description:
         'Real-time collaboration platform for teams with task tracking, file sharing, and communication features. Built with modern tech stack for optimal performance.',
       image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
       tags: ['React', 'Express', 'Socket.io', 'MongoDB'],
-      liveUrl: '#',
+      liveUrl: 'https://my-chat-s.netlify.app/',
       githubUrl: '#',
       color: 'from-orange-400 to-red-500',
     },

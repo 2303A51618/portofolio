@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send, Github, Linkedin } from "lucide-react";
 import { useState } from "react";
-import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,16 +10,37 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
-  emailjs.send(
-    'service_0smgyta',
-    'template_0igfjja',
-    formData,
-    'rN-Q5yZ0C1_9heVdY'
-  )
-  .then(() => alert("Message sent!"), (err) => alert("Failed to send message."));
-};
+  const [status, setStatus] = useState<null | "idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const form = new FormData();
+      form.append("name", formData.name);
+      form.append("email", formData.email);
+      form.append("subject", formData.subject);
+      form.append("message", formData.message);
+
+      const res = await fetch("https://formspree.io/f/mqawgydj", {
+        method: "POST",
+        body: form,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      setStatus("error");
+    }
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -213,6 +233,18 @@ const Contact = () => {
                     className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-purple-500 transition-all duration-300 resize-none"
                   />
 
+                  {status === "success" && (
+                    <div className="text-green-400 text-sm font-medium bg-green-900/10 p-3 rounded-md">
+                      Thanks — your message was sent.
+                    </div>
+                  )}
+
+                  {status === "error" && (
+                    <div className="text-red-400 text-sm font-medium bg-red-900/10 p-3 rounded-md">
+                      Oops — something went wrong. Please try again.
+                    </div>
+                  )}
+
                   <motion.button
                     type="submit"
                     whileHover={{
@@ -220,10 +252,11 @@ const Contact = () => {
                       boxShadow: "0 0 30px rgba(168, 85, 247, 0.6)",
                     }}
                     whileTap={{ scale: 0.97 }}
-                    className="w-full py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/60 transition-all duration-300 flex items-center justify-center gap-2"
+                    disabled={status === "loading"}
+                    className={`w-full py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/30 hover:shadow-purple-500/60 transition-all duration-300 flex items-center justify-center gap-2 ${status === "loading" ? 'opacity-60 cursor-not-allowed' : ''}`}
                   >
                     <Send size={20} />
-                    Send Message
+                    {status === "loading" ? "Sending..." : "Send Message"}
                   </motion.button>
                 </form>
               </div>

@@ -6,16 +6,7 @@ const Certifications = () => {
   const [flippedCard, setFlippedCard] = useState<number | null>(null);
 
   const certifications = [
-    {
-      title: 'MongoDB Atlas Associate Developer',
-      issuer: 'MongoDB University',
-      date: 'March 2024',
-      description:
-        'Comprehensive certification covering MongoDB fundamentals, data modeling, CRUD operations, aggregation framework, and performance optimization.',
-      skills: ['MongoDB', 'NoSQL', 'Database Design', 'Performance Tuning'],
-      color: 'from-green-400 to-emerald-500',
-      link: '#',
-    },
+    
     {
       title: 'Cisco Certified Network Associate (CCNA)',
       issuer: 'Cisco',
@@ -27,12 +18,12 @@ const Certifications = () => {
       link: '#',
     },
     {
-      title: 'React Advanced Patterns',
+      title: 'Full Stack Web Development Certification',
       issuer: 'Frontend Masters',
       date: 'December 2023',
       description:
         'Advanced React concepts including custom hooks, performance optimization, state management patterns, and modern React architecture.',
-      skills: ['React', 'Hooks', 'Performance', 'Architecture'],
+      skills: ['React', 'Express', 'MongoDB', 'APIs'],
       color: 'from-cyan-400 to-blue-500',
       link: '#',
     },
