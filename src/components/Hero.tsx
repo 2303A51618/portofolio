@@ -109,7 +109,7 @@ export default function Hero() {
 
           <div className="buttons-animate buttons-row">
             <a 
-    href="/Vasu__CV.docx" 
+    href="/Vasu__CV_S.pdf" 
     target="_blank" 
     className="btn-hover btn-resume"
 >
