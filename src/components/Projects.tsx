@@ -23,7 +23,16 @@ const Projects = () => {
       githubUrl: '#',
       color: 'from-green-400 to-emerald-500',
     },
-    
+    {
+  title: 'Zombie Survival Game – FPS',
+  description:
+    'A Unity-based First Person Shooter game with a zombie survival theme. Built using Unity terrain, featuring raycasting for shooting mechanics and core FPS gameplay. Includes item pickups, AI-driven zombies with navigation and precise pathfinding to chase the player.',
+  image: 'https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=800',
+  tags: ['Unity', 'C#', 'AI Navigation', 'Raycasting'],
+  liveUrl: '#',
+  githubUrl: 'https://github.com/jashwanthreddy21/GMDD-Zombie-Game.git',
+  color: 'from-green-500 to-gray-900',
+}
     {
       title: 'Chat Connect – Real-Time Collaboration App',
       description:
