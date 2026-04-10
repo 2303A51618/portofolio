@@ -32,7 +32,7 @@ const Projects = () => {
   liveUrl: '#',
   githubUrl: 'https://github.com/jashwanthreddy21/GMDD-Zombie-Game.git',
   color: 'from-green-500 to-gray-900',
-}
+},
     {
       title: 'Chat Connect – Real-Time Collaboration App',
       description:
