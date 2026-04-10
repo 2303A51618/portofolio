@@ -13,6 +13,7 @@ const Skills = () => {
         { name: 'Java Script', level: 85 },
         { name: 'Tailwind CSS', level: 95 },
         { name: 'HTML/CSS', level: 95 },
+        { name: 'Unity', level: 95 },
       ],
     },
     {
@@ -23,6 +24,7 @@ const Skills = () => {
         { name: 'Express', level: 85 },
         { name: 'REST APIs', level: 90 },
         { name: 'Python', level: 80 },
+         { name: 'C #', level: 80 },
         
       ],
     },
