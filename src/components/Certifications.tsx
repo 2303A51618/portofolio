@@ -18,15 +18,15 @@ const Certifications = () => {
       link: '#',
     },
     {
-      title: 'Full Stack Web Development Certification',
-      issuer: 'Frontend Masters',
-      date: 'December 2023',
-      description:
-        'Advanced React concepts including custom hooks, performance optimization, state management patterns, and modern React architecture.',
-      skills: ['React', 'Express', 'MongoDB', 'APIs'],
-      color: 'from-cyan-400 to-blue-500',
-      link: '#',
-    },
+  title: 'AWS Certified Solutions Architect',
+  issuer: 'Amazon Web Services (AWS)',
+  date: '2025',
+  description:
+    'Validated expertise in designing secure, scalable, and cost-effective cloud solutions on AWS. Covers cloud architecture, networking, storage, compute services, security best practices, and high-availability system design.',
+  skills: ['AWS', 'Cloud Computing', 'Architecture Design', 'Security'],
+  color: 'from-yellow-400 to-orange-500',
+  link: 'https://drive.google.com/file/d/1scIgwzCb4qhD81pCmrB15KoB1mqIVZn0/view',
+},
   ];
 
   return (
