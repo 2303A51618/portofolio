@@ -27,6 +27,38 @@ const Certifications = () => {
   color: 'from-yellow-400 to-orange-500',
   link: 'https://drive.google.com/file/d/1scIgwzCb4qhD81pCmrB15KoB1mqIVZn0/view',
 },
+   {
+    title: 'CCNA: Introduction to Networks',
+    issuer: 'Cisco Networking Academy',
+    date: '15 June 2026',
+    description:
+      'Introduces the fundamentals of networking including network architectures, IP addressing, Ethernet concepts, and basic network configuration and troubleshooting.',
+    skills: ['Networking Basics', 'IP Addressing', 'Ethernet', 'Network Troubleshooting'],
+    color: 'from-blue-400 to-cyan-500',
+    link: 'https://drive.google.com/file/d/138QHFfdVs-gQz--6oT8ugtFqCnoYturi/view?usp=sharing',
+  },
+
+  {
+    title: 'CCNA: Switching, Routing and Wireless Essentials',
+    issuer: 'Cisco Networking Academy',
+    date: '11 June 2026',
+    description:
+      'Focuses on configuring switches and routers, implementing VLANs, inter-VLAN routing, wireless networks, and improving network performance and security.',
+    skills: ['Switching', 'Routing', 'VLANs', 'Wireless Networking'],
+    color: 'from-orange-400 to-red-500',
+    link: 'https://drive.google.com/file/d/19eU91GUtC7aRzmm2eneFG-XunnvAgALj/view?usp=sharing',
+  },
+
+  {
+    title: 'CCNA: Enterprise Networking, Security and Automation',
+    issuer: 'Cisco Networking Academy',
+    date: '15 June 2026',
+    description:
+      'Covers advanced enterprise networking concepts including network security, automation, scalability, and modern enterprise network design.',
+    skills: ['Enterprise Networking', 'Network Security', 'Automation', 'Scalability'],
+    color: 'from-purple-400 to-pink-500',
+    link: 'https://drive.google.com/file/d/1IrLDUZ2wxhXuIPsCXX5IyNPnQ0b1otiJ/view?usp=sharing',
+  },
   ];
 
   return (
