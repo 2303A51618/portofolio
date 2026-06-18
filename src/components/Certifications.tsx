@@ -8,16 +8,6 @@ const Certifications = () => {
   const certifications = [
     
     {
-      title: 'Cisco Certified Network Associate (CCNA)',
-      issuer: 'Cisco',
-      date: 'January 2024',
-      description:
-        'The CCNA (Cisco Certified Network Associate) is the foundational cert proving skills in configuring, operating, and troubleshooting core networking, making it essential for student entry into IT support and junior engineering roles. 🧑‍💻🌐',
-      skills: ['Networking', 'Routing & Switching', 'Network Security', 'Troubleshooting'],
-      color: 'from-orange-400 to-red-500',
-      link: '#',
-    },
-    {
   title: 'AWS Certified Solutions Architect',
   issuer: 'Amazon Web Services (AWS)',
   date: '2025',
