@@ -150,7 +150,7 @@ const About = () => {
 
               <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-gray-900 border-4 border-cyan-500/50 p-2 shadow-2xl shadow-cyan-500/40">
                 <img
-                  src="/vasu_img.jpg"
+                  src="/vasu.jpg"
                   alt="Vasu Chippa"
                   className="w-full h-full object-cover rounded-full"
                 />
