@@ -115,6 +115,8 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={variants}
+
+
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-0 flex items-center justify-center">
@@ -148,7 +150,7 @@ const About = () => {
 
               <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center bg-gray-900 border-4 border-cyan-500/50 p-2 shadow-2xl shadow-cyan-500/40">
                 <img
-                  src="/vasu.jpg"
+                  src="/vasu_img.jpg"
                   alt="Vasu Chippa"
                   className="w-full h-full object-cover rounded-full"
                 />
